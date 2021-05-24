@@ -1,0 +1,1 @@
+INSERT INTO `negocio`(`idNegocio`, `nombreNegocio`, `descripcionNegocio`, `telefono`, `email`, `price`, `idUsuario`, `idCategoria`, `idEstado`) VALUES (1,'Abarrotes Maria','Todo para tu canasta básica y más','5533664488','abarrotesm@gmail.com','1-1000',1,1,9)

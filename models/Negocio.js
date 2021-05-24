@@ -1,6 +1,7 @@
 const { DataTypes } = require("sequelize");
 const db = require("../config/db");
 const Estado = require("./Estado");
+const Categoria = require("./Categoria");
 const Usuario = require("./Usuario");
 
 const Negocio = db.sequelize.define(
@@ -22,6 +23,11 @@ const Negocio = db.sequelize.define(
             allowNull: false,
             references: {model: Usuario, key: "idUsuario"}
         },
+        idCategoria:{
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: { model: Categoria, key: "idCategoria" }
+        },
         nombreNegocio: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -30,6 +36,18 @@ const Negocio = db.sequelize.define(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        telefono:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        price:{
+            type: DataTypes.STRING,
+            allowNull:false,
+        },
+        email:{
+            type: DataTypes.STRING,
+            allowNull:false,
+        }
     },
     {
         timestamps: false,
@@ -42,6 +60,9 @@ Negocio.belongsTo(Estado, {
 });
 Negocio.belongsTo(Usuario, {
     foreignKey: "idUsuario",
+});
+Negocio.belongsTo(Categoria,{
+    foreignKey: "idCategoria",
 });
 
 module.exports = Negocio;

@@ -1,6 +1,7 @@
 const Negocio = require('../models/Negocio')
 const Estado = require('../models/Estado')
 const Usuario = require('../models/Usuario')
+const Categoria = require('../models/Categoria')
 
 function crearNegocio(req, res, next) {
     const ctg = Negocio.build(req.body);
@@ -13,7 +14,7 @@ function crearNegocio(req, res, next) {
 }
 
 function consultarNegocios(req, res) {
-    Negocio.findAll({include: [Estado, Usuario]})
+    Negocio.findAll({include: [Estado, Usuario,Categoria]})
         .then((Negocio) => {
             console.log("Entre a consultar Negocios");
             return res.json(Negocio);
@@ -29,7 +30,7 @@ function consultarNegocio(req, res) {
         where: {
             idNegocio: req.params.id,
         },
-        include: [Estado, Usuario]
+        include: [Categoria, Estado, Usuario]
     })
         .then((Negocio) => {
             console.log("Entre a consultar Negocio");
