@@ -1,5 +1,6 @@
 const { DataTypes } = require("sequelize");
 const db = require("../config/db");
+const Estado = require("./Estado");
 const Usuario = db.sequelize.define(
     "usuario",
     {
@@ -8,15 +9,18 @@ const Usuario = db.sequelize.define(
             primaryKey: true,
         },
         nombre: { type: DataTypes.STRING },
-        apellidoPaterno: { type: DataTypes.STRING },
-        apellidoMaterno: { type: DataTypes.STRING },
-        foto: { type: DataTypes.STRING },
-        edad: { type: DataTypes.INTEGER },
-        sexo: { type: DataTypes.STRING },
-        direccion: { type: DataTypes.STRING },
+        apellidos: { type: DataTypes.STRING },
+        genero: { type: DataTypes.STRING },
+        idEstado: {
+                type: DataTypes.INTEGER,
+                allowNull: false,
+                references: { model: Estado, key: "idEstado" },
+            },
         email: { type: DataTypes.STRING },
         password: { type: DataTypes.STRING },
-        telefono: { type: DataTypes.STRING },
+        tipo: { 
+                type: DataTypes.BOOLEAN,
+                defaultValue: false },
     },
     {
         timestamps: false,

@@ -1,11 +1,11 @@
 const Sequelize = require("sequelize");
 const db = {};
 const sequelize = new Sequelize(
-    process.env.DB,
-    process.env.USER,
-    process.env.PASSWORD,
+    'bntzg0mb4zbmuok6j1cm',//process.env.DB,
+    'uoaazezwaejxrfcz',//process.env.USER,
+    'ZU23llUYDv0r2LNcbMgA',//process.env.PASSWORD,
     {
-        host: process.env.HOST,
+        host: 'bntzg0mb4zbmuok6j1cm-mysql.services.clever-cloud.com',//process.env.HOST,
         dialect: "mysql",
         operatorAliases: false,
         pool: {

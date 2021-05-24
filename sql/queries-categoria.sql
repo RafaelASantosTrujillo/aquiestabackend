@@ -1,0 +1,11 @@
+INSERT INTO `categoria`(`idCategoria`, `nombreCategoria`) VALUES (1,'Abarrotes');
+INSERT INTO `categoria`(`idCategoria`, `nombreCategoria`) VALUES (2,'Clínica y/o farmacia');
+INSERT INTO `categoria`(`idCategoria`, `nombreCategoria`) VALUES (3,'Estética');
+INSERT INTO `categoria`(`idCategoria`, `nombreCategoria`) VALUES (4,'Pastelería');
+INSERT INTO `categoria`(`idCategoria`, `nombreCategoria`) VALUES (5,'Pizzería');
+INSERT INTO `categoria`(`idCategoria`, `nombreCategoria`) VALUES (6,'Restaurante');
+INSERT INTO `categoria`(`idCategoria`, `nombreCategoria`) VALUES (7,'Taquería');
+INSERT INTO `categoria`(`idCategoria`, `nombreCategoria`) VALUES (8,'Tienda de autoservicio');
+INSERT INTO `categoria`(`idCategoria`, `nombreCategoria`) VALUES (9,'Papelería');
+INSERT INTO `categoria`(`idCategoria`, `nombreCategoria`) VALUES (10,'Cerrajería');
+INSERT INTO `categoria`(`idCategoria`, `nombreCategoria`) VALUES (11,'Otro');

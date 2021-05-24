@@ -24,11 +24,11 @@ app.use((req, res, next) => {
 });
 
 const sequelize = new Sequelize(
-    process.env.DB,
-    process.env.USER,
-    process.env.PASSWORD,
+    'bntzg0mb4zbmuok6j1cm',
+    'uoaazezwaejxrfcz',
+    'ZU23llUYDv0r2LNcbMgA',
     {
-        host: process.env.HOST,
+        host: 'bntzg0mb4zbmuok6j1cm-mysql.services.clever-cloud.com',
         dialect: "mysql",
         operatorAliases: false,
         pool: {
@@ -39,6 +39,7 @@ const sequelize = new Sequelize(
         },
     }
 );
+
 sequelize
     .authenticate()
     .then(() => {
@@ -48,7 +49,7 @@ sequelize
         console.log("No se conecto :(, este es el error =>",err);
     });
 
-app.use("/v1", require("./routes"));
+app.use('/v1', require('./routes'));
 
 app.use(function (req, res, next) {
     var err = new Error("Not Found");

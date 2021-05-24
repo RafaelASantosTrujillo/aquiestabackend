@@ -3,6 +3,6 @@ const {
     consultarEstados,
 } = require('../controllers/estados')
 
-router.get("/consultarEstados", consultarEstados);
+router.get("/", consultarEstados);
 
 module.exports = router;

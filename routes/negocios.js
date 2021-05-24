@@ -7,10 +7,10 @@ const {
     eliminarNegocio,
 } = require('../controllers/negocios')
 
-router.post("/crearNegocio", crearNegocio);
-router.get("/consultarNegocios", consultarNegocios);
-router.get("/consultarNegocio:id", consultarNegocio);
-router.put("/modificarNegocio/:id", modificarNegocio);
-router.delete("/eliminarNegocio/:id", eliminarNegocio);
+router.post("/", crearNegocio);
+router.get("/", consultarNegocios);
+router.get("/:id", consultarNegocio);
+router.put("/:id", modificarNegocio);
+router.delete("/:id", eliminarNegocio);
 
 module.exports = router;
