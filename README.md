@@ -5,4 +5,3 @@ Proyecto de Backend con Node Equipo 8
 * Andrea Gutierrez Hernandez
 * Pamela Navarro Herrera
 * Rafael Alejandro Santos Trujillo
-* Victos Lascares Gallardo
