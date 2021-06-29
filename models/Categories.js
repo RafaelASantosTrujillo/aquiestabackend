@@ -1,15 +1,15 @@
 const { DataTypes } = require("sequelize");
 const db = require("../config/db");
-const Categoria = db.sequelize.define(
-    "categoria",
+const Categories = db.sequelize.define(
+    "categories",
     {
-        idCategoria: {
+        id_category: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
             AUTO_INCREMENT: true,
         },
-        nombreCategoria: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -21,4 +21,4 @@ const Categoria = db.sequelize.define(
     }
 );
 
-module.exports = Categoria;
+module.exports = Categories;
